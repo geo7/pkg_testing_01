@@ -1,0 +1,32 @@
+# https://semantic-release.gitbook.io/semantic-release/usage/configuration#debug
+debug: true
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - - "semantic-release-replace-plugin"
+    - replacements:
+        - files: 
+            - "pyproject.toml"
+          from: "^version = \".*\""
+          to: "version = \"${nextRelease.version}\""
+          results:
+            - file: "pyproject.toml"
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
+          countMatches: true
+        - files:
+            - "pkg_testing_01/__init__.py"
+          from: "^VERSION = \".*\""
+          to: "VERSION = \"${nextRelease.version}\""
+          results:
+            - file: "pkg_testing_01/__init__.py"
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
+          countMatches: true
+branches:
+  - name: main
+    type: release
+  - name: dev
+    type: pre-release
+    prerelease: true
