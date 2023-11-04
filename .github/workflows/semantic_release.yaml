@@ -1,11 +1,6 @@
 name: Semantic Release
 
-on:
-  pull_request:
-    types: [closed]
-    branches:
-      - main
-      - dev
+on: [push]
 
 jobs:
   release:
