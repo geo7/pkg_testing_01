@@ -20,11 +20,11 @@ plugins:
               numReplacements: 1
           countMatches: true
         - files:
-            - "semantic_test/__init__.py"
+            - "pkg_testing_01/__init__.py"
           from: "^VERSION = \".*\""
           to: "VERSION = \"${nextRelease.version}\""
           results:
-            - file: "semantic_test/__init__.py"
+            - file: "pkg_testing_01/__init__.py"
               hasChanged: true
               numMatches: 1
               numReplacements: 1
