@@ -9,23 +9,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+        uses: actions/setup-node@v3
 
-    - name: Semantic Release
-      uses: cycjimmy/semantic-release-action@v3.4.1
-      with:
-        extra_plugins: |
-          "@semantic-release/commit-analyzer@8.0.1"
-          "@semantic-release/release-notes-generator@9.0.3"
-          "@google/semantic-release-replace-plugin@1.2.0"
-          "@semantic-release/exec@5.0.0"
-          "@semantic-release/git@9.0.1"
-          "@semantic-release/github@7.2.3"
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install npm dependencies and run semantic release
+        run: |
+          npm i -D @semantic-release/commit-analyzer
+          npm i -D semantic-release-replace-plugin
+          npx semantic-release 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
