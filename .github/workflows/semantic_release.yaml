@@ -19,6 +19,6 @@ jobs:
           npm i -D semantic-release-replace-plugin
 
       - name: Semantic Release
-        run: npx semantic-release --repositoryUrl=https://github.com/geo7/pkg_testing_01
+        run: npx --repositoryUrl=https://github.com/geo7/pkg_testing_01 semantic-release 
         env:
           GITHUB_TOKEN: ${{ secrets.TK_TST_02 }}
