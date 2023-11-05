@@ -27,6 +27,8 @@ plugins:
 branches:
   - name: main
     type: release
+  - name: remove-if-condition-mess-about
+    type: release
   - name: dev
     type: pre-release
     prerelease: true
