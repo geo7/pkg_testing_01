@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pkg-testing-01"
-version = "0.1.0"
+version = "1.0.0"
 description = ""
 authors = ["George Lenton <georgelenton@gmail.com>"]
 readme = "README.md"
