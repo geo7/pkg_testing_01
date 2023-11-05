@@ -21,4 +21,4 @@ jobs:
       - name: Semantic Release
         run: npx semantic-release --repositoryUrl=https://github.com/geo7/pkg_testing_01
         env:
-          GITHUB_TOKEN: ${{ secrets.TK_TST_02 }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
