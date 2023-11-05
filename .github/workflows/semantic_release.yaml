@@ -16,6 +16,7 @@ jobs:
       - name: Install npm dependencies and run semantic release
         run: |
           npm i -D @semantic-release/commit-analyzer
+          npm i -D @semantic-release/git
           npm i -D semantic-release-replace-plugin
           npx semantic-release 
         env:
