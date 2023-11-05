@@ -2,7 +2,7 @@
 debug: true
 plugins:
   - "@semantic-release/commit-analyzer"
-  - - "semantic-release-replace-plugin"
+  - - "@google/semantic-release-replace-plugin"
     - replacements:
         - files: 
             - "pyproject.toml"
