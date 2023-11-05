@@ -1,8 +1,16 @@
 # https://semantic-release.gitbook.io/semantic-release/usage/configuration#debug
 debug: true
+branches:
+  - name: main
+    type: release
+  - name: remove-if-condition-mess-about
+    type: release
+  - name: dev
+    type: pre-release
+    prerelease: true
 plugins:
   - "@semantic-release/commit-analyzer"
-  - - "@google/semantic-release-replace-plugin"
+  - - "semantic-release-replace-plugin"
     - replacements:
         - files: 
             - "pyproject.toml"
@@ -24,11 +32,3 @@ plugins:
               numMatches: 1
               numReplacements: 1
           countMatches: true
-branches:
-  - name: main
-    type: release
-  - name: remove-if-condition-mess-about
-    type: release
-  - name: dev
-    type: pre-release
-    prerelease: true
