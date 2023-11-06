@@ -7,6 +7,10 @@ branches:
 
 plugins:
   # https://github.com/semantic-release/commit-analyzer
+  # default commit conventions that are used:
+  # https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format
+  # Default commit types:
+  # https://github.com/angular/angular/blob/main/CONTRIBUTING.md#type
   - "@semantic-release/commit-analyzer"
   # Note the assets part from the README
   # https://github.com/jpoehnelt/semantic-release-replace-plugin/blob/main/README.md
