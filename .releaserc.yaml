@@ -11,9 +11,19 @@ plugins:
   # https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format
   # Default commit types:
   # https://github.com/angular/angular/blob/main/CONTRIBUTING.md#type
+  # These have the following default behaviour: 
+  # build: n/a
+  # ci: n/a
+  # docs: n/a
+  # feat: increase minor version
+  # fix: increase patch version 
+  # perf: increase patch version
+  # refactor: nothing
+  # test: nothing
   - "@semantic-release/commit-analyzer"
   # Note the assets part from the README
   # https://github.com/jpoehnelt/semantic-release-replace-plugin/blob/main/README.md
+  # Files that are to be changed need to be in the /git part as well. 
   - - "semantic-release-replace-plugin"
     - replacements:
         - files: 
