@@ -6,7 +6,10 @@ branches:
     prerelease: true
 
 plugins:
+  # https://github.com/semantic-release/commit-analyzer
   - "@semantic-release/commit-analyzer"
+  # Note the assets part from the README
+  # https://github.com/jpoehnelt/semantic-release-replace-plugin/blob/main/README.md
   - - "semantic-release-replace-plugin"
     - replacements:
         - files: 
