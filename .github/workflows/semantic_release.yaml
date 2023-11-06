@@ -1,3 +1,5 @@
+# default commit conventions that are used:
+# https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format
 name: Semantic Release
 
 on: [push]
