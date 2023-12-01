@@ -16,6 +16,11 @@ pandas = "^2.1.3"
 pytest = "^7.4.3"
 ruff = "^0.1.6"
 
+
+[tool.poetry.group.for_the_sake_of_it.dependencies]
+textual = "^0.44.0"
+mkdocs = "^1.5.3"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
