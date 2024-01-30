@@ -18,7 +18,7 @@ ruff = "^0.1.15"
 
 
 [tool.poetry.group.for_the_sake_of_it.dependencies]
-textual = "^0.44.1"
+textual = "^0.47.1"
 mkdocs = "^1.5.3"
 
 [build-system]
