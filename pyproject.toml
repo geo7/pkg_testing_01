@@ -14,7 +14,7 @@ pandas = "^2.1.4"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
-ruff = "^0.1.15"
+ruff = "^0.2.0"
 
 
 [tool.poetry.group.for_the_sake_of_it.dependencies]
